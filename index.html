@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Restaurante Laurel. Sabores que cuentan historias. Disfruta de nuestra cocina de origen con productos locales y experiencias únicas.">
+        <title>Restaurante Laurel | Cocina de Origen</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="Logo2.svg" class="logo" alt="Logo de Restaurante Laurel">
+            <nav id="navbar">
+                <div class="nav-links" id="nav-links">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                    <a class="nav-link" href="#menu">Menú</a>
+                    <a class="nav-link" href="#ubicacion">Ubicación</a>
+                    <a class="nav-link" href="#footer">Contacto</a>
+                </div>
+                <button class="nav-button" id="btn-reservar" aria-haspopup="dialog" aria-controls="reserva-modal">Reservar</button>
+                <a class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links"><img src="icons/Menu.svg"></a>
+            </nav>
+        </header>
+
+        <div id="reserva-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+            <div class="modal-content">
+                <button class="close-modal" id="close-modal" aria-label="Cerrar ventana de reserva">&times;</button>
+                <h2 id="modal-title">Reserva tu mesa</h2>
+                <p>Déjanos tus datos y prepararemos una experiencia inolvidable para ti.</p>
+                <form id="reserva-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora" name="hora" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="personas">Número de personas</label>
+                        <input type="number" id="personas" name="personas" min="1" max="20" required>
+                    </div>
+                    <button type="submit" class="cta submit-btn">Confirmar Reserva</button>
+                </form>
+            </div>
+        </div>
+
+        <main>
+            <section class="hero">
+                <h1>Sabores que cuentan <span class="important">historias</span></h1>
+                <p class="description">COCINA DE ORIGEN<span class="text-divider" aria-hidden="true"> • </span>PRODUCTOS LOCALES<span class="text-divider" aria-hidden="true"> • </span>EXPERIENCIAS ÚNICAS</p>
+                <a href="#menu" class="cta">VER MENÚ</a>
+            </section>
+            <section id="inicio">
+                <div class="card">
+                    <img class="card-icon" src="icons/herb.svg" alt="" aria-hidden="true">
+                    <h2 class="card-title">INGREDIENTES LOCALES</h2>
+                    <p>Trabajamos con productos locales para traerte lo mejor de nuestra tierra</p>
+                </div>
+                <div class="card">
+                    <img class="card-icon" src="icons/chef.svg" alt="" aria-hidden="true">
+                    <h2 class="card-title">COCINA DE ORIGEN</h2>
+                    <p>Preparamos recetas tradicionales con un toque contemporáneo</p>
+                </div>
+                <div class="card">
+                    <img class="card-icon" src="icons/wine.svg" alt="" aria-hidden="true">
+                    <h2 class="card-title">EXPERIENCIAS ÚNICAS</h2>
+                    <p>Más que comida, te damos momentos inolvidables</p>
+                </div>
+            </section>
+            <section id="menu">
+                <h2>Nuestro menú</h2>  
+                <div class="grid-container">
+                    <div class="food-card">
+                        <img class="food-image" src="images/ensalada-de-la-huerta.jfif" alt="Plato de ensalada de la huerta con ingredientes frescos">
+                        <h3 class="food-title">Ensalada de la huerta</h3>
+                        <p class="food-text">Frescos ingredientes locales de temporada combinados con aderezos artesanales de la casa.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/ceviche-de-autor.jfif" alt="Plato de ceviche de autor marinado en cítricos">
+                        <h3 class="food-title">Ceviche de autor</h3>
+                        <p class="food-text">Delicado pescado del día marinado en cítricos frescos, con un toque contemporáneo de especias.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/corvina-a-la-brasa.jfif" alt="Filete de corvina cocinado a las brasas">
+                        <h3 class="food-title">Corvina a la brasa</h3>
+                        <p class="food-text">Jugoso filete de corvina con cocción precisa a las brasas, acompañado de guarnición tradicional de la tierra.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/cordero-asado-lento.jfif" alt="Corte de cordero asado a fuego lento">
+                        <h3 class="food-title">Cordero asado lento</h3>
+                        <p class="food-text">Tradicional corte de cordero preparado mediante cocción lenta durante horas para lograr una textura tierna y jugosa.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/tarta-de-queso-fundente.jfif" alt="Rebanada de tarta de queso artesanal">
+                        <h3 class="food-title">Tarta de queso fundente</h3>
+                        <p class="food-text">Exquisita tarta artesanal con interior cremoso y una base crujiente de galleta dorada.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/frutas-de-temporada.jfif" alt="Selección de frutas frescas de temporada">
+                        <h3 class="food-title">Frutas de temporada</h3>
+                        <p class="food-text">Selección de frutos frescos de la región finamente cortados y acompañados de un toque sutil de almíbar dulce.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/vino-de-la-casa.jfif" alt="Copa de vino tinto de la casa">
+                        <h3 class="food-title">Vino de la casa</h3>
+                        <p class="food-text">Exclusivo vino tinto con notas aromáticas intensas, ideal para maridar con carnes y platos principales.</p>
+                    </div>
+                    <div class="food-card">
+                        <img class="food-image" src="images/vixen.jfif" alt="Botella de vino blanco Vixen">
+                        <h3 class="food-title">Vixen</h3>
+                        <p class="food-text">Etiqueta seleccionada que equilibra frescura y cuerpo, perfecta para acompañar entradas y pescados.</p>
+                    </div>
+                </div>      
+            </section>
+            <section id="horarios">
+                <h2>Horarios</h2>
+                <div class="center-vertical-divider">
+                    <div>
+                        <h3 class="text-center">Lunes a Jueves</h3>
+                        <p class="bottom-line text-center">12:00 p.m - 10:00 p.m</p>
+                    </div>
+                    <div>
+                        <h3 class="text-center">Viernes y Sábados</h3>
+                        <p class="bottom-line text-center">12:00 p.m - 11:30 p.m</p>
+                    </div>
+                    <div>
+                        <h3 class="text-center">Domingos y Festivos</h3>
+                        <p class="text-center">12:00 p.m - 5:00 p.m</p>
+                    </div>
+                </div>
+            </section>
+            <section id="ubicacion">
+                <h2>¿En dónde estamos?</h2>
+                <div class="map-container">
+                    <iframe class="mapa" title="Mapa con la ubicación de Restaurante Laurel" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.111221530778!2d-56.183114289463575!3d-34.90365827328588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f802c9e7279ed%3A0x1894df2fbc546c76!2sAv.%2018%20de%20Julio%2C%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses-419!2sco!4v1788570484168!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="footer-main">
+                <div class="vertical-divider">
+                    <img src="icons/Logo.svg" class="footer-logo" alt="Logo de Restaurante Laurel">
+                    <div class="divider">
+                        <span class="legend">Sabores que cuentan historias</span>
+                    </div>
+                </div>
+                <div class="divider">
+                    <div class="footer-section" id="explora">
+                        <span>EXPLORA</span>
+                        <a href="#inicio">Inicio</a>
+                        <a href="#menu">Menú</a>
+                        <a href="#ubicacion">Ubicación</a>
+                    </div>
+                    <div class="footer-section" id="legal">
+                        <span>LEGAL</span>
+                        <a href="#terminos">Términos y condiciones</a>
+                        <a href="#privacidad">Política de privacidad</a>
+                    </div>
+                    <address class="footer-section" id="siguenos">
+                        <span>SÍGUENOS</span>
+                        <div class="divider">
+                            <a href="https://instagram.com" aria-label="Visitar nuestro perfil de Instagram">
+                                <img src="icons/Instagram.svg" class="icon" alt="" aria-hidden="true">
+                            </a>
+                            <a href="https://whatsapp.com" aria-label="Contactarnos a través de WhatsApp">
+                                <img src="icons/whatsapp.svg" class="icon" alt="" aria-hidden="true">
+                            </a>
+                            <a href="https://facebook.com" aria-label="Visitar nuestra página de Facebook">
+                                <img src="icons/facebook.svg" class="icon" alt="" aria-hidden="true">
+                            </a>
+                            <a href="https://youtube.com" aria-label="Visitar nuestro canal de YouTube">
+                                <img src="icons/youtube.svg" class="icon" alt="" aria-hidden="true">
+                            </a>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <p class="legend">© 2026 Dilan Pinzón. Todos los derechos reservados</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
